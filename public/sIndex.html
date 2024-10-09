@@ -8,117 +8,125 @@
 </head>
 <body>
   <h1>Upload to GitHub</h1>
-  To host your 
-
-to-do-list
-
- app on GitHub Pages, follow these steps:
-
-### Step 1: Install `gh-pages` package
-Install the `gh-pages` package as a dev dependency. This package will help you deploy your app to GitHub Pages.
-
-```bash
-npm install gh-pages --save-dev
-```
-
-### Step 2: Update `package.json`
-Add the following properties to your `package.json` file:
-
-1. **Homepage**: Add the `homepage` field to specify the URL where your app will be hosted.
-2. **Scripts**: Add `predeploy` and `deploy` scripts.
-
-```json
-{
-  "name": "to-do-list",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://<your-username>.github.io/<repository-name>",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.13",
-    "gh-pages": "^4.0.0"
-  }
-}
-```
-
-Replace `<your-username>` with your GitHub username and `<repository-name>` with the name of your repository.
-
-### Step 3: Initialize Git Repository
-If you haven't already, initialize a Git repository in your project directory and commit your changes.
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### Step 4: Create GitHub Repository
-Create a new repository on GitHub and push your local repository to GitHub.
-
-```bash
-git remote add origin https://github.com/<your-username>/<repository-name>.git
-git branch -M main
-git push -u origin main
-```
-
-### Step 5: Deploy to GitHub Pages
-Deploy your app to GitHub Pages using the `deploy` script.
-
-```bash
-npm run deploy
-```
-
-### Step 6: Enable GitHub Pages
-1. Go to your repository on GitHub.
-2. Navigate to **Settings** > **Pages**.
-3. Under **Source**, select the `gh-pages` branch and click **Save**.
-
-Your app should now be live at `https://<your-username>.github.io/<repository-name>`.
-
-### Summary
-1. Install `gh-pages`.
-2. Update `package.json` with `homepage`, `predeploy`, and `deploy` scripts.
-3. Initialize Git repository and push to GitHub.
-4. Deploy using `npm run deploy`.
-5. Enable GitHub Pages in the repository settings.
-
-This will host your 
-
-to-do-list
-
- app on GitHub Pages.
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=
+            , initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Upload to GitHub</h1>
+        To host your 
+        to-do-list
+        app on GitHub Pages, follow these steps:
+        ### Step 1: Install `gh-pages` package
+        Install the `gh-pages` package as a dev dependency. This package will help you deploy your app to GitHub Pages.
+        ```bash
+        npm install gh-pages --save-dev
+        ```
+        ### Step 2: Update `package.json`
+        Add the following properties to your `package.json` file:
+        1. **Homepage**: Add the `homepage` field to specify the URL where your app will be hosted.
+        2. **Scripts**: Add `predeploy` and `deploy` scripts.
+        ```json
+        {
+        "name": "to-do-list",
+        "version": "0.1.0",
+        "private": true,
+        "homepage": "https://
+        <your-username>
+        .github.io/
+        <repository-name>
+        ",
+        "dependencies": {
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+        },
+        "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "eject": "react-scripts eject"
+        },
+        "eslintConfig": {
+        "extends": [
+        "react-app",
+        "react-app/jest"
+        ]
+        },
+        "browserslist": {
+        "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+        ],
+        "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+        ]
+        },
+        "devDependencies": {
+        "tailwindcss": "^3.4.13",
+        "gh-pages": "^4.0.0"
+        }
+        }
+        ```
+        Replace `
+        <your-username>
+        ` with your GitHub username and `
+        <repository-name>
+        ` with the name of your repository.
+        ### Step 3: Initialize Git Repository
+        If you haven't already, initialize a Git repository in your project directory and commit your changes.
+        ```bash
+        git init
+        git add .
+        git commit -m "Initial commit"
+        ```
+        ### Step 4: Create GitHub Repository
+        Create a new repository on GitHub and push your local repository to GitHub.
+        ```bash
+        git remote add origin https://github.com/
+        <your-username>
+        /
+        <repository-name>
+        .git
+        git branch -M main
+        git push -u origin main
+        ```
+        ### Step 5: Deploy to GitHub Pages
+        Deploy your app to GitHub Pages using the `deploy` script.
+        ```bash
+        npm run deploy
+        ```
+        ### Step 6: Enable GitHub Pages
+        1. Go to your repository on GitHub.
+        2. Navigate to **Settings** > **Pages**.
+        3. Under **Source**, select the `gh-pages` branch and click **Save**.
+        Your app should now be live at `https://
+        <your-username>
+        .github.io/
+        <repository-name>
+        `.
+        ### Summary
+        1. Install `gh-pages`.
+        2. Update `package.json` with `homepage`, `predeploy`, and `deploy` scripts.
+        3. Initialize Git repository and push to GitHub.
+        4. Deploy using `npm run deploy`.
+        5. Enable GitHub Pages in the repository settings.
+        This will host your 
+        to-do-list
+        app on GitHub Pages.
+    </body>
+</html>
 </body>
 </html>
