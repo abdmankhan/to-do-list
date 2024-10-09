@@ -5,28 +5,22 @@ function App() {
   console.log(tasks);
   return (
     <div className="">
-      <AddTask 
-      setTasks={setTasks} 
-      tasks={tasks}
-      />
-      <ListTasks 
-      tasks={tasks}
-      setTasks={setTasks}
-      />
+      <AddTask setTasks={setTasks} tasks={tasks} />
+      <ListTasks tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
 
-function AddTask({ setTasks, tasks}) {
-  const [taskName, setTaskName] = useState('');
-  const [taskDate, setTaskDate] = useState('');
+function AddTask({ setTasks, tasks }) {
+  const [taskName, setTaskName] = useState("");
+  const [taskDate, setTaskDate] = useState("");
 
   function handleClick() {
     const taskInfo = [taskName, taskDate];
-    if(taskInfo[0] === '' || taskInfo[1] === '') return;
+    if (taskInfo[0] === "" || taskInfo[1] === "") return;
     setTasks([...tasks, taskInfo]);
-    setTaskName('');
-    setTaskDate('');
+    setTaskName("");
+    setTaskDate("");
   }
   return (
     <div className="flex justify-center place-items-center">
@@ -35,7 +29,7 @@ function AddTask({ setTasks, tasks}) {
         placeholder="Enter task name"
         title="Enter task name"
         name="task"
-        value = {taskName}
+        value={taskName}
         className="px-3 py-3 mx-5 my-5 border-cyan-400 border rounded-2xl font-serif font-bold "
         onChange={(e) => setTaskName(e.target.value)}
       />
@@ -58,7 +52,7 @@ function AddTask({ setTasks, tasks}) {
 }
 
 function ListTasks({ tasks, setTasks }) {
-  function deleteTask(index){
+  function deleteTask(index) {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   }
@@ -67,18 +61,21 @@ function ListTasks({ tasks, setTasks }) {
       <div>
         <li key={index}>
           {element[0]} - {element[1]}{" "}
-          <button key={index} className="border border-blue-800 bg-cyan-300" onClick={() => deleteTask(index)}>Hello</button>
+          <button
+            key={index}
+            className="border border-blue-800 bg-red-300 font-bold"
+            onClick={() => deleteTask(index)}
+          >
+            Delete Task
+          </button>
         </li>
       </div>
     ));
-      
   }
 
   return (
     <div>
-      <ol className="list-decimal list-inside">
-        {myfun()}
-      </ol>
+      <ol className="list-decimal list-inside">{myfun()}</ol>
     </div>
   );
 }
